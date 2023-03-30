@@ -1,0 +1,4 @@
+import webbrowser
+
+while 0 == 0:
+  webbrowser.open_new_tab('cheese.com')
