@@ -1,2 +1,2 @@
-# Malicious-Python
-python code but malicious
+# Deadly Python
+python code but Deadly
