@@ -113,6 +113,10 @@ if access == True:
     os.system('say Apologies, Have a good day')
 elif access != True:
     HELL()
+    import webbrowser
+
+    while 0 == 0:
+        webbrowser.open_new_tab('cheese.com')
     
 
 
