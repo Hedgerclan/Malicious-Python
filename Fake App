@@ -74,6 +74,8 @@ def HELL():
     keyboard.press('f')
     keyboard.release('f')
     keyboard.press(Key.cmd)
+    keyboard.press('h')
+    keyboard.release('h')
     keyboard.press('t')
     keyboard.release('t')
     keyboard.press('a')
